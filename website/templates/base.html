@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Template</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <nav id="topnav">
+        <a id="logo" class="nav-link" href="{% url 'pages:home' %}">LOGO</a>
+        <a class="nav-link" href="{% url 'pages:home' %}">Home</a>
+        <a class="nav-link" href="{% url 'pages:about' %}">About</a>
+        <a class="nav-link" href="{% url 'pages:contact' %}">Contact</a>
+        <a class="nav-link" href="{% url 'pages:workshop' %}">Workshop</a>
+        <a class="nav-link" href="{% url 'pages:galery' %}">Galery</a>
+
+        {% if request.user.is_authenticated %}
+        <a id="campus" class="nav-link" href="{% url 'users:campus' %}">Campus Virtual</a>
+        <a id="logout" class="nav-link" href="{% url 'users:logout' %}">Logout</a>
+        {% else %}
+        <a id="login" class="nav-link" href="{% url 'pages:login' %}">Login</a>
+        <a id="register" class="nav-link" href="{% url 'users:register' %}">Register</a>
+        {% endif %}
+    </nav>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}><script>alert('{{ message }}')</script></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <main class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </main>
+</body>
+
+</html>

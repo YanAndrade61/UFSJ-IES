@@ -1,0 +1,111 @@
+#topnav {
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: Black;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.nav-link {
+    display: inline-block;
+    width: 100px;
+    height: 55px;
+
+    color: White;
+
+    text-align: center;
+    line-height: 55px;
+
+    text-decoration: none;
+}
+
+#logo {
+    width: 120px;
+
+    background-color: RoyalBlue;
+
+    font-weight: bold;
+}
+
+/* User is not autenticate */
+#register {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 29, 117);
+
+
+}
+
+#login {
+    position: absolute;
+    top: 0;
+    right: 100px;
+}
+
+/* User is autenticate */
+
+#campus {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 29, 117);
+
+
+}
+
+#logout {
+    position: absolute;
+    top: 0;
+    right: 100px;
+}
+
+
+/* General styles */
+
+h1 {
+    position: absolute;
+    justify-content: center;
+    top: 50px;
+    left: 800px;
+}
+
+/* .loginForm {
+    position: absolute;
+    justify-content: center;
+    top: 80px;
+    left: 800px;
+} */
+
+form {
+    position: absolute;
+    top: 120px;
+    left: 600px;
+}
+
+/* Full-width inputs */
+label{
+    width: 100%;
+    display: inline-block;
+}
+button{
+    width: 50%;
+    display: inline-block;
+}
+span{
+    width: 50%;
+    display: inline-block;
+}
+input{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
